@@ -193,7 +193,7 @@ def _parse_description_from_file_path(file_path):
             'segment': int(segment[1:]),
         })
         if not abnormal:
-            year, month, day = tokens[-3].split('_')[1:]
+            year, month, day = tokens[-3].split('_')[1:][0], 1, 1
             description['year'] = int(year)
             description['month'] = int(month)
             description['day'] = int(day)
